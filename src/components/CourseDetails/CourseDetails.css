@@ -1,0 +1,37 @@
+.course-details {
+    padding: 20px 0 20px 0; /* Отступы вокруг содержимого */
+    text-align: center; /* Выравнивание текста по центру */
+}
+
+.loading-message,
+.error-message {
+    font-size: 18px;
+    color: #5D3427; /* Цвет сообщения об ошибке или загрузке */
+    margin-top: 20px;
+}
+
+.course-text {
+    font-family: 'Steppe-Book';
+    font-size: 18px;
+    line-height: 1.6; /* Увеличиваем интерлиньяж для легкости чтения */
+    color: #5D3427; /* Цвет текста курса */
+    margin-top: 20px; /* Отступ сверху */
+}
+
+.CourseDetailsImage {
+    width: 100%;
+}
+
+/* Адаптивные стили */
+@media (max-width: 767px) {
+    .course-text {
+        font-size: 16px; /* Меньший размер шрифта для мобильных устройств */
+    }
+
+    .loading-message,
+    .error-message {
+        font-size: 16px; /* Меньший размер шрифта для сообщений */
+    }
+
+
+}

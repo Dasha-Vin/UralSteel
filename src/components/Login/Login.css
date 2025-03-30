@@ -1,0 +1,65 @@
+.LoginContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    min-height: 100vh; /* Устанавливаем минимальную высоту на весь экран */
+    background-color: white; 
+    padding: 10px;
+}
+
+form {
+    background-color: #ffa500d6; 
+    padding: 40px 20px;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* Тень для эффекта поднятия */
+    width: 400px; 
+    height: 350px;
+    text-align: center;
+}
+
+.OpenLog {
+    font-family: 'Steppe-ExtraBold', sans-serif;
+    margin-bottom: 20px; 
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.form_item {
+    margin-bottom: 25px; 
+}
+
+.form__name {
+    width: 90%;
+    padding: 10px; 
+    border: 2px solid #ccc;
+    border-radius: 5px; 
+    font-size: 22px; 
+    background-color: orange;
+    color: black; 
+    transition: border-color 0.3s ease; 
+}
+
+.form__name:focus {
+    outline: none;
+    border-color: #aaa; 
+    background-color: orange;
+}
+
+.Open {
+    font-family: 'Steppe-Book', sans-serif;
+    margin-top: 20px;
+    padding: 10px 15px; 
+    border: none; 
+    border-radius: 5px;
+    background-color: #0056b3; 
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+@media (max-width: 400px) {
+    form {
+        width: 100%;
+    }
+}

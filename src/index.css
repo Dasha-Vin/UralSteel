@@ -1,0 +1,85 @@
+html, body {
+  height: 100%; 
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Steppe-Book';
+  src: url("./fonts/Steppe-Book.ttf");
+}
+
+@font-face {
+  font-family: 'Steppe-ExtraBold';
+  src: url("./fonts/Steppe-ExtraBold.ttf");
+}
+
+body {
+  background-color: white;
+  font-family: 'Steppe-Book', sans-serif;
+  color: #5D3427;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main {
+  position: relative;
+}
+
+.common-title {
+  font-family: 'Steppe-ExtraBold', sans-serif;
+  font-size: 60px;
+  line-height: 100%;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.line1 {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: calc(100% - 960px);
+}
+
+.line3 {
+  position: absolute;
+  z-index: -1;
+  top: -15px; /* или любое значение, которое вам нужно */
+  left: -120px;
+}
+
+.Arrow-back {
+  display: flex; /* Используем flexbox для горизонтального выравнивания */
+  align-items: center; /* Центрируем по вертикали */
+  cursor: pointer; /* Указываем, что элемент кликабельный */
+  padding: 7px 6px;
+}
+
+.backImage {
+  margin-right: 2px; /* Отступ справа от изображения */
+  width: 30px;
+  height: 30px;
+}
+
+@media (max-width: 767px) {
+  .common-title {
+      font-size: 45px;
+  }
+  .container {
+      padding: 0 10px 0 10px;
+  }
+}
+
+@media (max-width: 375px) {
+  .common-title {
+      font-size: 30px;
+  }
+}

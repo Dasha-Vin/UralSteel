@@ -1,0 +1,90 @@
+.main-content {
+    padding-top: 140px;
+    padding-bottom: 150px;
+}
+
+.main-info {
+    max-width: 811px;
+}
+
+.main-title {
+    font-family: 'Steppe-ExtraBold', sans-serif;
+    font-size: 80px;
+    line-height: 100%;
+    margin-bottom: 20px;
+}
+
+.main-text {
+    max-width: 697px;
+    font-size: 18px;
+    line-height: 130%;
+    margin-bottom: 40px;
+}
+
+.main-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 25px; /* Отступ снизу перед текстом */
+    
+}
+
+.button {
+    background-color: rgb(255, 129, 12);
+    border-radius: 60px;
+    height: 58px;
+    width: 205px;
+    box-sizing: border-box;
+    padding: 18px;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    outline: none;
+    border: 0;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: rgba(247, 153, 65, 0.863);
+}
+
+@media (min-width: 1200px) {
+    .main-image {
+        position: absolute;
+        top: 250px;
+        right: 0;
+        z-index: -1;
+        width: 37%;
+        height: auto
+    }
+}
+
+@media (max-width: 1199px) {
+    .main-content {
+        margin: 0 auto;
+        padding-top: 60px;
+        padding-left: 10px;
+        max-width: 960px;
+    }
+
+    .main-title {
+        font-size: 65px;
+    }
+}
+
+@media (max-width: 765px) {
+    .main-content {
+        padding-bottom: 90px;
+        padding-top: 50px;
+        padding-left: 0;
+    }
+
+    .main-title {
+        font-size: 43px;
+    }
+}
+
+@media (max-width: 310px) {
+    .main-title {
+        font-size: 35px;
+    }
+}

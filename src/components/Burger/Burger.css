@@ -1,0 +1,119 @@
+.burger {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: all 0.5s ease;
+}
+
+.burger_btn {
+    display: none;
+}
+
+.burger_open {
+    visibility: visible;
+    opacity: 1;
+}
+
+.burger_content {
+    width: 300px;
+    height: 100%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 80px 0 50px 30px;
+    background-color: white;
+    transition: transform 0.3s linear, background-color 1s linear;
+    transform: translateX(100%);
+}
+
+.burger_open .burger_content {
+    transform: translateX(0);
+    background-color: rgb(243, 153, 69);
+}
+
+.burger-nav {
+    margin-top: 20px;
+}
+
+.burger-navList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.burger-navItem a {
+    font-family: 'Steppe-Book', sans-serif;
+    font-size: 25px;
+    line-height: 34px;
+    color: #5D3427;
+    text-decoration: none;
+}
+
+.burger_close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    background: none;
+    border: none;
+}
+
+.burger-logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.logo {
+    margin-right: 6px; 
+    width: 40px;
+    height: 40px;
+}
+
+.burger-title {
+    font-family: 'Steppe-ExtraBold', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+@media (max-width: 1199px) {
+    .burger_btn {
+        display: block;
+        width: 50px;
+        position: absolute;
+        right: 0;
+        background: none;
+        border: none;
+        font-size: 36px; 
+        color: black;    
+        cursor: pointer;
+    }
+
+    .burger_btn::before {
+        font-family: 'Material Symbols Outlined';
+        content: 'menu'; /* Имя иконки */
+    }
+}
+  
+@media (max-width: 767px) {
+    .burger-close-btn {
+        right: 20px;
+        top: 20px;
+        width: 30px;
+        height: 30px;
+        background-image: url("../images/close.png");
+    }
+    .burger_content {
+        padding: 80px 16px 80px 16px;
+    }
+}

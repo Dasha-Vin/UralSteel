@@ -1,0 +1,58 @@
+.main-programm {
+    padding-bottom: 150px;
+    position: relative;
+}
+
+.programms {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 40px;
+    row-gap: 50px;
+}
+
+.programm {
+    position: relative;
+    width: calc(50% - 20px);
+}
+
+.programm__text {
+    font-family: 'Steppe-Book', sans-serif;
+    background-color: rgb(243, 153, 69);
+    padding: 30px 10px; /* Убедитесь, что отступы равны */
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 34px; /* Можно настроить для лучшего вида */
+    text-align: center;
+    border-radius: 60px;
+    cursor: pointer;
+}
+
+.programm__text:hover {
+    opacity: 0.8;
+}
+
+.programm__text a {
+    text-align: center;
+    text-decoration: none;
+    color: #5D3427;
+
+}
+
+.programm__text:hover a {
+    border-bottom: 3px solid #5D3427;
+}
+
+
+@media (max-width: 767px) {
+    .main-programm {
+        padding-bottom: 90px;
+    }
+
+    .programms {
+        flex-direction: column;
+    }
+
+    .programm {
+        width: 100%;
+    }
+}

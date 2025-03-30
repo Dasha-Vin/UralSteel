@@ -1,0 +1,42 @@
+.help {
+    font-weight: 700;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    border: 1px solid #5D3427;
+    padding: 8px 16px;
+    height: auto;
+    min-width: 25px;
+    border-radius: 50px;
+    text-align: center;
+    cursor: pointer;
+    line-height: 17px;
+    z-index: 1;
+    user-select: none;
+    transform: scale(1);
+    animation: pulse 2s infinite;
+}
+  
+@keyframes pulse {
+    0% {
+        transform: scale(0.9);
+        box-shadow: 0 0 0 0 rgba(93, 52, 39, 0.5); /* Более темная тень */
+    }
+  
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 15px rgba(93, 52, 39, 0); /* Тень более заметна */
+    }
+  
+    100% {
+        transform: scale(0.9);
+        box-shadow: 0 0 0 0 rgba(93, 52, 39, 0);
+    }
+}
+
+@media (max-width: 767px) {
+    .help {
+        right: 25px;
+        bottom: 50px;
+    }
+  }
