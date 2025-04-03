@@ -11,7 +11,7 @@ const App = () => {
     const [userId, setUserId] = useState(null); // Состояние для хранения userId
 
     return (
-        <Router>
+        <Router basename="/">
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/login" element={<Login setUserId={setUserId} />} />
