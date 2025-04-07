@@ -10,7 +10,7 @@ const Home = ({ onLoginClick }) => {
     return (
         <main className="main">
             <ChatBot />
-            <Header />
+            <Header onLoginClick={onLoginClick}/>
             <MainContent />
             <Programs />
             <AboutUs />

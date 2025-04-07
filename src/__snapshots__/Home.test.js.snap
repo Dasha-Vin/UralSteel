@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Component соответствует снепшоту 1`] = `
+<DocumentFragment>
+  <main
+    class="main"
+  >
+    <div
+      data-testid="chatbot"
+    >
+      ChatBot
+    </div>
+    <div
+      data-testid="header"
+    >
+      Header
+    </div>
+    <div
+      data-testid="main-content"
+    >
+      MainContent
+    </div>
+    <div
+      data-testid="programs"
+    >
+      Programs
+    </div>
+    <div
+      data-testid="about-us"
+    >
+      AboutUs
+    </div>
+    <div
+      data-testid="contacts"
+    >
+      Contacts
+    </div>
+  </main>
+</DocumentFragment>
+`;
