@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import Header from './components/Header/Header';
 import MainContent from './components/MainContent/MainContent';
-import Programs from './components/Programs/Programs';
-import AboutUs from './components/AboutUs/AboutUs';
-import Contacts from './components/Contacts/Contacts';
 import ChatBot from './components/ChatBot/ChatBot';
+
+const Programs = React.lazy(() => import('./components/Programs/Programs'));
+const AboutUs = React.lazy(() => import('./components/AboutUs/AboutUs'));
+const Contacts = React.lazy(() => import('./components/Contacts/Contacts'));
 
 const Home = ({ onLoginClick }) => {
     return (
@@ -12,11 +13,18 @@ const Home = ({ onLoginClick }) => {
             <ChatBot />
             <Header onLoginClick={onLoginClick}/>
             <MainContent />
-            <Programs />
-            <AboutUs />
-            <Contacts />
+            
+            <Suspense fallback={<div>Загрузка программ...</div>}>
+                <Programs />
+            </Suspense>
+            
+            <Suspense fallback={<div>Загрузка информации о нас...</div>}>
+                <AboutUs />
+            </Suspense>
+            
+            <Suspense fallback={<div>Загрузка контактов...</div>}>
+                <Contacts />
+            </Suspense>
         </main>
     );
 }
-
-export default Home;
